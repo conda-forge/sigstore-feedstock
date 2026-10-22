@@ -25,6 +25,7 @@ requirements:
     - python ${{ python_min }}.*
     - flit-core >=3.2,<4
     - pip
+    - uv-build
   run:
     - python >=${{ python_min }}
     - cryptography >=42,<47

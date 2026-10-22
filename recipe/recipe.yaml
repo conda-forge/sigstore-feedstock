@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "4.5.0"
+  version: "4.5.1"
   python_min: "3.11"
 
 package:
@@ -10,11 +10,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/sigstore/sigstore-${{ version }}.tar.gz
-  sha256: 020d3e07f622b2916bf453e66ff6ff0711e1fdc5ab69e8bd8902f71d9fcb316f
+  sha256: 14accda8a7d4ef47cb25b4903829fb10f011048c261a5937724a43d073c4f34d
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
@@ -23,23 +23,21 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - flit-core >=3.2,<4
     - pip
+    - uv-build >=0.12.0,<0.13.0
   run:
     - python >=${{ python_min }}
-    - cryptography >=42,<47
+    - cryptography >=47
     - id >=1.1.0
-    - pyasn1 >=0.6,<1.dev0
     - pydantic >=2,<3
     - pyjwt >=2.1
-    - pyopenssl >=23.0.0
     - requests
-    - rich >=13,<15
+    - rich >=13,<16
     - rfc8785 >=0.1.2,<0.2.dev0
     - rfc3161-client >=1.0.3,<1.1.0
     - sigstore-models ==0.0.6
     - sigstore-rekor-types ==0.0.18
-    - tuf >=6.0,<7.dev0
+    - tuf >=6,<8
     - platformdirs >=4.2,<5.dev0
 
 tests:

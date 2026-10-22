@@ -23,24 +23,21 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - flit-core >=3.2,<4
     - pip
-    - uv-build
+    - uv-build >=0.12.0,<0.13.0
   run:
     - python >=${{ python_min }}
-    - cryptography >=42,<47
+    - cryptography >=47
     - id >=1.1.0
-    - pyasn1 >=0.6,<1.dev0
     - pydantic >=2,<3
     - pyjwt >=2.1
-    - pyopenssl >=23.0.0
     - requests
-    - rich >=13,<15
+    - rich >=13,<16
     - rfc8785 >=0.1.2,<0.2.dev0
     - rfc3161-client >=1.0.3,<1.1.0
     - sigstore-models ==0.0.6
     - sigstore-rekor-types ==0.0.18
-    - tuf >=6.0,<7.dev0
+    - tuf >=6,<8
     - platformdirs >=4.2,<5.dev0
 
 tests:

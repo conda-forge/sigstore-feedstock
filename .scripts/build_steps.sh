@@ -96,6 +96,7 @@ if [[ "${BUILD_WITH_CONDA_DEBUG:-0}" == 1 ]]; then
         --target-platform "${HOST_PLATFORM}"
 
     rattler-build debug shell
+    touch "${FEEDSTOCK_ROOT}/build_artifacts/conda-forge-build-done-${CONFIG}"
     exit 0
 fi
 

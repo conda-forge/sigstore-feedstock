@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "4.5.1"
+  version: "4.6.0"
   python_min: "3.11"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/sigstore/sigstore-${{ version }}.tar.gz
-  sha256: 14accda8a7d4ef47cb25b4903829fb10f011048c261a5937724a43d073c4f34d
+  sha256: dc9a7bd0e35ee381a6f70281f520f858d12b34a997c023f7dec835c0095a5067
 
 build:
   noarch: python
